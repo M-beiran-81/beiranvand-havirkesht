@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ثبت استان</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Style.css" />
+    <style>
+      body {
+        font-family: "yekanbakh";
+        background: #f0f0f0;
+        direction: rtl;
+        text-align: center;
+      }
+
+      @font-face {
+        font-family: "yekanbakh";
+        src: url("../fonts/YekanBakhFaNum-VF.woff");
+        src: url("../fonts/YekanBakhFaNum-VF.woff2");
+      }
+
+      table {
+        margin: 40px auto;
+        border-collapse: collapse;
+        width: 90%;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+      }
+
+      th {
+        background: #013766;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .Province_registration {
+        margin-top: 50px;
+        font-weight: bold;
+      }
+
+      .new_province {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+      }
+
+      .new_province button {
+        color: white;
+        display: block;
+        margin-top: 10px;
+        padding: 15px 20px;
+        background: #013766;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease 0.05s;
+      }
+
+      .new_province button:hover {
+        background: #03559dff;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="Loading md:top-[20px] md:right-[600px] lg:top-[10px] lg:right-[950px]"
+      id="Loading"
+    >
+      <div
+        class="loadingImage md:w-[120px] md:h-[120px] lg:w-[70px] lg:h-[70px]"
+      >
+        <img src="Images/Loading.gif" />
+      </div>
+      <span class="md:text-[36px] lg:text-[16px]">در حال پردازش</span>
+    </div>
+
+    <h2 class="Province_registration md:text-[40px] lg:text-[22px]">
+      ثبت استان
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table
+        id="Province_registration"
+        class="md:min-w-[2000px] lg:min-w-[600px] md:text-[35px] lg:text-[16px]"
+      >
+        <tr>
+          <th class="px-4 py-2">نام استان</th>
+          <th class="px-4 py-2">تاریخ ایجاد</th>
+          <th class="px-4 py-2">عملیات</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="new_province md:right-[430px] lg:right-[670px]">
+      <button class="md:text-[35px] lg:text-[16px]">ثبت استان جدید</button>
+    </div>
+
+    <!-- Generate_new_province_form -->
+    <div
+      class="Generate_new_province_main_box md:w-[900px] md:h-[1200px] lg:w-[450px] lg:h-[285px] md:top-[90px] md:right-[40px] lg:top-[150px] lg:right-[540px]"
+    >
+      <div
+        class="Generate_new_province_form md:w-[900px] md:h-[600px] lg:w-[400px] lg:h-[280px]"
+      >
+        <div
+          class="Generate_new_province_exit_button md:w-[80px] md:h-[80px] lg:w-[30px] lg:h-[30px]"
+        >
+          <h3 class="md:text-[45px] lg:text-[20px]">✖</h3>
+        </div>
+
+        <div
+          class="Generate_new_province_error md:top-[350px] md:right-[25px] lg:top-[190px] lg:right-[50px] md:text-[32px] lg:text-[12px]"
+        >
+          وارد کردن نام استان الزامی است.
+        </div>
+
+        <div
+          class="Generate_new_province_title md:w-[650px] md:h-[90px] lg:w-[300px] lg:h-[40px] md:mt-[-40px] lg:mt-[-20px] md:mr-[95px] lg:mr-[45px]"
+        >
+          <h3 class="md:text-[40px] lg:text-[16px] md:mt-[15px] lg:mt-[6px]">
+            اضافه کردن استان
+          </h3>
+        </div>
+
+        <form
+          id="Generate_new_province_form"
+          action=""
+          method="post"
+          autocomplete="off"
+        >
+          <div class="province md:mb-[75px] lg:mb-[16px]">
+            <label for="province" class="md:text-[40px] lg:text-[16px]"
+              >نام استان:</label
+            >
+            <br />
+            <input
+              class="md:w-[850px] md:h-[150px] lg:w-[344px] lg:h-[55px] md:text-[40px] lg:text-[15px]"
+              type="text"
+              name="province"
+              id="province"
+              placeholder="نام استان را وارد کنید:"
+            />
+          </div>
+
+          <div class="enter">
+            <input
+              class="md:w-[850px] md:h-[120px] lg:w-[343px] lg:h-[50px] md:text-[40px] lg:text-[16px]"
+              type="submit"
+              value="ثبت"
+              id="enterProvince"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/Province_registration.js"></script>
+  </body>
+</html>

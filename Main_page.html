@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>سامانه هاویر کشت</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Style.css" />
+  </head>
+
+  <body>
+    <div
+      class="user_window md:top-[370px] md:left-[230px] lg:top-[90.5px] lg:left-[124px] md:w-[420px] lg:w-[220px]"
+    >
+      <div class="user_window_buttons">
+        <a href="User_profile.html" class="md:text-[32px] lg:text-[16px]"
+          >پروفایل</a
+        >
+      </div>
+      <div class="user_window_buttons">
+        <button id="logout_button" class="md:text-[32px] lg:text-[16px]">
+          خروج از سیستم
+        </button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header md:h-[400px] lg:h-[120px]">
+      <div
+        class="header_title md:top-[40px] md:right-[310px] lg:top-[40px] lg:right-[35px]"
+      >
+        <h1 class="md:text-[40px] lg:text-[22px]">سامانه هاویر کشت</h1>
+      </div>
+
+      <div class="zarebin_img md:hidden lg:block">
+        <img src="Images/zarebin.png" />
+      </div>
+
+      <div
+        class="search-bar md:top-[150px] md:right-[20px] lg:top-[45px] lg:right-[225px] md:w-[948px] md:h-[100px] lg:w-[548px] lg:h-[26px]"
+      >
+        <input
+          class="md:w-[900px] md:h-[100px] lg:w-[500px] lg:h-[45px] md:text-[40px] lg:text-[16px]"
+          type="text"
+          id="searchInput"
+          placeholder="جستجو"
+        />
+        <ul
+          id="search_suggestions"
+          class="search_suggestions md:w-[900px] lg:w-[500px] md:top-[100px] md:right-[25px] lg:top-[37px] lg:right-[23px] md:text-[36px] lg:text-[16px]"
+        ></ul>
+      </div>
+
+      <div
+        class="not_found md:w-[900px] md:h-[200px] lg:w-[500px] lg:h-[130px] md:top-[250px] md:right-[43px] lg:top-[80px] lg:right-[248px]"
+      >
+        <span class="md:text-[36px] lg:text-[16px]"
+          >نتیجه ای برای جستجوی شما یافت نشد ❌</span
+        >
+      </div>
+
+      <div
+        class="remove_search md:w-[50px] md:h-[48px] lg:w-[19px] lg:h-[18px] md:top-[175px] md:right-[860px] lg:top-[49px] lg:right-[717px] md:text-[36px] lg:text-[12px]"
+      >
+        <span>✖</span>
+      </div>
+
+      <div
+        class="log_in_or_sign_up md:top-[280px] md:left-[330px] lg:top-[35px] lg:left-[125px]"
+      >
+        <div
+          class="user-block md:h-[90px] lg:h-[56px] span md:text-[32px] lg:text-[15px]"
+          id="username"
+        >
+          <img
+            src="Images/Human.png"
+            class="human_image md:w-[70px] md:h-[70px] lg:w-[45px] lg:h-[45px]"
+          />
+        </div>
+      </div>
+
+      <div
+        class="contact_us md:top-[45px] md:left-[250px] lg:top-[45px] lg:left-[65px] md:w-[60px] md:h-[60px] lg:w-[30px] lg:h-[30px]"
+      >
+        <a href="Contact_us.html"><img src="Images/Contact us.png" /></a>
+      </div>
+    </div>
+    <div class="line1"></div>
+    <!-- Menu -->
+    <div class="menu md:h-[100px] lg:h-[0px]">
+      <ul class="ul_block">
+        <li class="li">
+          <a href="Main_page.html" class="md:text-[36px] lg:text-[16.5px]"
+            >خانه</a
+          >
+        </li>
+        <li class="dropdown">
+          <span class="md:text-[36px] lg:text-[16.5px]">داده های اولیه</span>
+          <ul class="dropdown-content md:min-w-[330px] lg:min-w-[180px]">
+            <li>
+              <a
+                href="Registration_of_the_crop_year.html"
+                class="md:text-[36px] lg:text-[16.5px]"
+                >ثبت سال زراعی</a
+              >
+            </li>
+            <li>
+              <a
+                href="Province_registration.html"
+                class="md:text-[36px] lg:text-[16.5px]"
+                >ثبت استان</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="li">
+          <a href="Farmers_invoice.html" class="md:text-[36px] lg:text-[16.5px]"
+            >صورتحساب کشاورزان</a
+          >
+        </li>
+        <li class="dropdown">
+          <span class="md:text-[36px] lg:text-[16.5px]">گزارش گیری</span>
+          <ul
+            class="dropdown-content2 md:min-w-[330px] lg:min-w-[170px] md:right-[-50px] lg:right-[0px]"
+          >
+            <li>
+              <a href="Main_page.html" class="md:text-[36px] lg:text-[16.5px]"
+                >گزارش کلی</a
+              >
+            </li>
+            <li>
+              <a
+                href="Factory_reports.html"
+                class="md:text-[36px] lg:text-[16.5px]"
+                >گزارش کارخانه ها</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <span class="md:text-[36px] lg:text-[16.5px]">تنظیمات</span>
+          <ul class="dropdown-content md:min-w-[330px] lg:min-w-[180px]">
+            <li>
+              <a
+                href="Change_password.html"
+                class="md:text-[36px] lg:text-[16.5px]"
+                >تغییر رمز عبور</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="li">
+          <a href="Contact_us.html" class="md:text-[36px] lg:text-[16.5px]"
+            >تماس با ما</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="title-cards md:text-[40px] lg:text-[28px]"
+      id="crop_year_name"
+    ></div>
+
+    <div
+      class="Loading md:top-[20px] md:right-[600px] lg:top-[10px] lg:right-[950px]"
+      id="Loading"
+    >
+      <div
+        class="loadingImage md:w-[120px] md:h-[120px] lg:w-[70px] lg:h-[70px]"
+      >
+        <img src="Images/Loading.gif" />
+      </div>
+      <span class="md:text-[36px] lg:text-[16px]">در حال پردازش</span>
+    </div>
+
+    <div class="Main_block">
+      <div
+        class="Cards-container md:w-[700px] md:mr-[145px] flex flex-wrap md:justify-between lg:justify-around lg:w-[1200px] lg:mx-auto"
+      >
+        <!-- Card 1 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="current_contractor_remaining_balance"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page1.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">
+            مانده فعلی در حساب پیمانکار
+          </h3>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="farmers_commitment_count"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page2.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">تعداد قرارداد کشاورزان</h3>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="total_delivered_tonnage"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page3.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">کل تناژ تحویلی کشاورزان</h3>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="total_farmers_debt"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page4.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">جمع بدهی به کشاورزان</h3>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="total_farmers_receivable"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page5.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">جمع طلب از کشاورزان</h3>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="farmers_remaining_settlement"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page6.jpg" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">مانده تا تسویه کشاورزان</h3>
+        </div>
+        <!-- Card 7 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="contractor_fee"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page7.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">
+            کارمزد پیمانکار (یک درصد)
+          </h3>
+        </div>
+        <!-- Card 8 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="contractor_seed_profit"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page8.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">سود پیمانکار از بذر</h3>
+        </div>
+        <!-- Card 9 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="contractor_pesticide_profit"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page9.gif" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">سود پیمانکار از سم</h3>
+        </div>
+        <!-- Card 10 -->
+        <div
+          class="Cards-card md:w-[700px] lg:w-[330px] p md:text-[36px] lg:text-[16px]"
+          id="overall_contractor_status"
+        >
+          <div class="Card-img md:mr-[180px] lg:mr-[15px]">
+            <img src="Images/Main_page10.png" />
+          </div>
+          <h3 class="md:text-[36px] lg:text-[20px]">وضعیت کلی پیمانکار</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty_block"></div>
+
+    <!-- Footer -->
+    <div class="footer1 md:h-[400px] lg:h-[140px]">
+      <div
+        class="footer1-1 md:w-[600px] lg:w-[200px] md:top-[50px] md:right-[270px] lg:top-[80px] lg:right-[25px]"
+      >
+        <h3 class="md:text-[36px] lg:text-[14px]">
+          تلفن پشتیبانی : 09166528826
+        </h3>
+      </div>
+
+      <div
+        class="footer1-2 md:w-[800px] lg:w-[360px] md:top-[160px] md:right-[100px] lg:top-[80px] lg:right-[210px]"
+      >
+        <h3 class="md:text-[34px] lg:text-[13px]">
+          هر روز هفته ساعت 8 الی 20 پاسخ گوی شما هستیم
+        </h3>
+      </div>
+
+      <div
+        class="backToFirst md:w-[300px] lg:w-[120px] md:top-[280px] md:left-[330px] lg:top-[50px] lg:left-[15px]"
+      >
+        <h3 class="backToFirst_h3 md:text-[36px] lg:text-[16px]">
+          بازگشت به بالا ⮝
+        </h3>
+      </div>
+    </div>
+    <div class="line2"></div>
+    <div class="footer2 md:h-[500px] lg:h-[200px]">
+      <div
+        class="footer2-1 md:w-[600px] lg:w-[380px] md:top-[100px] md:right-[190px] lg:top-[100px] lg:right-[380px]"
+      >
+        <h3 class="md:text-[36px] lg:text-[14px]">
+          هاویر کشت را در شبکه های اجتماعی دنبال کنید
+        </h3>
+      </div>
+
+      <div
+        class="footer2-2 md:top-[290px] md:right-[50px] lg:top-[95px] lg:right-[720px] md:w-[900px] md:h-[150px] lg:w-[470px] lg:h-[50px]"
+      >
+        <div
+          class="footer2-2-1 md:w-[70px] md:h-[70px] lg:w-[30px] lg:h-[30px] md:ml-[90px] lg:ml-[50px]"
+        >
+          <a href="">
+            <img src="Images/instagram-logo.png" />
+          </a>
+        </div>
+
+        <div
+          class="footer2-2-2 md:w-[70px] md:h-[70px] lg:w-[30px] lg:h-[30px] md:ml-[90px] lg:ml-[50px]"
+        >
+          <a href="">
+            <img src="Images/twitter- logo.png" />
+          </a>
+        </div>
+
+        <div
+          class="footer2-2-3 md:w-[70px] md:h-[70px] lg:w-[30px] lg:h-[30px] md:ml-[90px] lg:ml-[50px]"
+        >
+          <a href="">
+            <img src="Images/youtube-logo.png" />
+          </a>
+        </div>
+
+        <div
+          class="footer2-2-4 md:w-[65px] md:h-[65px] lg:w-[28px] lg:h-[28px] md:ml-[30px] lg:ml-[50px]"
+        >
+          <a href="">
+            <img src="Images/telegram-logo.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/js_file.js"></script>
+  </body>
+</html>

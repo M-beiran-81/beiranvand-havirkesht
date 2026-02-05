@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>گزارش کارخانه ها</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Style.css" />
+    <style>
+      body {
+        font-family: "yekanbakh";
+        background: #f0f0f0;
+        direction: rtl;
+        text-align: center;
+      }
+
+      @font-face {
+        font-family: "yekanbakh";
+        src: url("../fonts/YekanBakhFaNum-VF.woff");
+        src: url("../fonts/YekanBakhFaNum-VF.woff2");
+      }
+
+      table {
+        margin: 5px auto 30px auto;
+        border-collapse: collapse;
+        width: 90%;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+      }
+
+      th {
+        background: #013766;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .Factory_reports {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title_Factory_reports md:text-[40px] lg:text-[26px]">
+      <h2>گزارش کلی همه کارخانه‌ها براساس سال زراعی 1404</h2>
+    </div>
+
+    <div
+      class="Loading md:top-[20px] md:right-[600px] lg:top-[10px] lg:right-[950px]"
+      id="Loading"
+    >
+      <div
+        class="loadingImage md:w-[120px] md:h-[120px] lg:w-[70px] lg:h-[70px]"
+      >
+        <img src="Images/Loading.gif" />
+      </div>
+      <span class="md:text-[36px] lg:text-[16px]">در حال پردازش</span>
+    </div>
+
+    <div class="Main_block">
+      <div
+        class="Factory_reports_Cards-container md:w-[700px] md:mr-[145px] flex flex-wrap md:justify-between lg:justify-around lg:w-[1200px] lg:mx-auto"
+      >
+        <!-- Card 1 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_money_received_all_factories"
+        >
+          <h3 class="md:text-[36px] lg:text-[18px]">
+            کل مبلغ دریافتی از کارخانه‌ها
+          </h3>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_farmers_debt_all"
+        >
+          <h3
+            class="md:text-[36px] lg:text-[18px] p md:text-[36px] lg:text-[22px]"
+          >
+            کل طلب کشاورزان
+          </h3>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_farmers_payment_cash_all"
+        >
+          <h3
+            class="md:text-[36px] lg:text-[18px] p md:text-[36px] lg:text-[22px]"
+          >
+            کل پرداختی نقدی
+          </h3>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="remained_now_contractor_all"
+        >
+          <h3
+            class="md:text-[36px] lg:text-[18px] p md:text-[36px] lg:text-[22px]"
+          >
+            مانده حساب پیمانکار
+          </h3>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_factory_delivered_tonnage"
+        >
+          <h3 class="md:text-[36px] lg:text-[18px]">
+            کل تناژ تحویلی به کارخانجات
+          </h3>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_factory_commitment_tonnage"
+        >
+          <h3 class="md:text-[36px] lg:text-[18px]">
+            کل تناژ تعهد به کارخانجات
+          </h3>
+        </div>
+        <!-- Card 7 -->
+        <div
+          class="Cards_Factory_reports md:w-[700px] lg:w-[300px] p md:text-[36px] lg:text-[22px]"
+          id="total_remaining_commitment_tonnage"
+        >
+          <h3 class="md:text-[36px] lg:text-[18px]">
+            کل مانده تعهد به کارخانجات
+          </h3>
+        </div>
+      </div>
+
+      <div class="title_Factory_reports md:text-[40px] lg:text-[26px]">
+        <h2>جزئیات هر کارخانه</h2>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table
+          id="Factory_reports"
+          class="md:min-w-[2000px] lg:min-w-[600px] md:text-[35px] lg:text-[16px]"
+        >
+          <thead>
+            <tr>
+              <th class="px-4 py-2">نام کارخانه</th>
+              <th class="px-4 py-2">دریافتی</th>
+              <th class="px-4 py-2">تناژ تحویلی به کارخانه</th>
+              <th class="px-4 py-2">تناژ تعهد به کارخانه</th>
+              <th class="px-4 py-2">مانده تناژ تا تعهد</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/Factory_reports.js"></script>
+  </body>
+</html>

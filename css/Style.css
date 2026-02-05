@@ -1,0 +1,1128 @@
+/* Main_page //////////////////////////////////////////////////////////////////////*/
+* {
+  padding: 0;
+  border: 0;
+  direction: rtl;
+  font-family: "yekanbakh";
+}
+
+@font-face {
+  font-family: "yekanbakh";
+  src: url("../fonts/YekanBakhFaNum-VF.woff2");
+  src: url("../fonts/YekanBakhFaNum-VF.woff");
+}
+
+.header {
+  width: 100%;
+  background: white;
+  position: relative;
+}
+
+.header_title {
+  height: 20px;
+  position: absolute;
+}
+
+.header_title h1 {
+  color: #0f3b62;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.zarebin_img {
+  width: 44px;
+  height: 44px;
+  border-radius: 15px;
+  position: absolute;
+  top: 36px;
+  right: 252px;
+  z-index: 1000;
+}
+
+.zarebin_img img {
+  max-width: 100%;
+}
+
+.search-bar input[type="text"] {
+  padding: 7px 50px 7px 10px;
+  border-radius: 10px;
+  background: #e6e6e6;
+}
+
+.search_suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  background: white;
+  position: absolute;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.search_suggestions li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search_suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+#search_suggestions li.active {
+  background-color: #0077cc;
+  color: white;
+}
+
+.not_found {
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #9ca3af;
+  visibility: hidden;
+}
+
+.not_found span {
+  display: block;
+  margin-top: 50px;
+}
+
+.remove_search {
+  position: absolute;
+  color: white;
+  background: #808080;
+  text-align: center;
+  border-radius: 40px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.remove_search span {
+  display: block;
+  margin-top: 1.5px;
+}
+
+.log_in_or_sign_up {
+  background: #013766;
+  border-radius: 20px;
+  position: absolute;
+  transition: background 0.3s ease 0.05s;
+}
+
+.log_in_or_sign_up .l_o_s {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 18px;
+  display: inline-block;
+}
+
+.log_in_or_sign_up:hover {
+  background: #095da7;
+  border-radius: 20px;
+}
+
+.contact_us {
+  background: white;
+  position: absolute;
+}
+
+.contact_us img {
+  max-width: 100%;
+}
+
+.line1 {
+  width: 100%;
+  height: 3px;
+  background: #e6e6e6;
+}
+
+.ul_block {
+  margin-right: 20px;
+}
+
+.menu li {
+  list-style: none;
+  float: right;
+  margin: 12px 3px 5px 5px;
+}
+
+.menu li a {
+  font-weight: bold;
+  color: #013766;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.menu .dropdown span {
+  font-weight: bold;
+  color: #013766;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.menu .li :hover {
+  color: #298ee6;
+  border-bottom: 1.9px solid #013766;
+}
+
+.menu .dropdown :hover {
+  color: #298ee6;
+}
+
+.menu .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  padding: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1fb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  padding: 15px 0 15px 10px;
+}
+
+.dropdown-content2 a:hover {
+  background: #f1f1fb;
+}
+
+.dropdown:hover .dropdown-content2 {
+  display: block;
+}
+
+.Loading {
+  position: absolute;
+  background: #929da4;
+  display: flex;
+  justify-content: center;
+}
+
+.Loading span {
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+.loadingImage img {
+  max-width: 100%;
+}
+
+.Main_block {
+  background: #f3f0f0;
+}
+
+.title-cards h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #013766;
+  padding: 50px 0 30px 0;
+  margin-top: 60px;
+  background: #f3f0f0;
+}
+
+.Cards-card {
+  background: white;
+  margin: 20px;
+  border-radius: 20px;
+  border: 2px solid #f3f0f0;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Card-img img {
+  width: 265px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: white;
+}
+
+.Cards-img img {
+  max-width: 100%;
+}
+
+.Cards-card h3 {
+  color: #013766;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Cards-card p {
+  color: #333;
+  line-height: 24px;
+  text-align: center;
+}
+
+.empty_block {
+  width: 100%;
+  height: 50px;
+  background: #f3f0f0;
+}
+
+.footer1 {
+  width: 100%;
+  background: #3b3b3b;
+  position: relative;
+}
+
+.footer1-1 {
+  background: #3b3b3b;
+  position: absolute;
+}
+
+.footer1-1 h3 {
+  color: #f3f0f0;
+}
+
+.footer1-2 {
+  background: #3b3b3b;
+  position: absolute;
+}
+
+.footer1-2 h3 {
+  color: #f3f0f0;
+  margin-right: 14px;
+}
+
+.backToFirst {
+  position: absolute;
+}
+
+.backToFirst h3 {
+  color: white;
+  padding: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.line2 {
+  width: 100%;
+  height: 0.9px;
+  background: #616060;
+}
+
+.footer2 {
+  width: 100%;
+  background: #333;
+  position: relative;
+}
+
+.footer2-1 {
+  background: #333;
+  position: absolute;
+}
+
+.footer2-1 h3 {
+  color: #f3f0f0;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.footer2-2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+.footer2 .footer2-2-1 {
+  background: #333;
+  margin-top: 3px;
+}
+
+.footer2 .footer2-2-2 {
+  background: #333;
+  margin-top: 3px;
+}
+
+.footer2 .footer2-2-3 {
+  background: #333;
+  margin-top: 3px;
+}
+
+.footer2 .footer2-2-4 {
+  background: #333;
+}
+
+.footer2-2 img {
+  max-width: 100%;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #eae7e7;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.user-name {
+  font-weight: bold;
+  color: black;
+  margin-right: 0;
+}
+
+.human_image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user_window {
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #333;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.user_window_buttons {
+  height: 65px;
+  background: white;
+  border-radius: 10px;
+  border-bottom: 2px solid #d6d6d9;
+}
+
+.user_window a {
+  display: block;
+  margin-top: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+  text-decoration: none;
+  color: #4e4f70;
+  padding: 15px 10px;
+  background: white;
+}
+
+.user_window button {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+  color: #4e4f70;
+  padding: 15px 10px 15px 101px;
+  background: white;
+  cursor: pointer;
+}
+
+.user_window a:hover {
+  background: #e6e6e6;
+}
+
+.user_window button:hover {
+  background: #e6e6e6;
+}
+
+/* Log_in //////////////////////////////////////////////////////////////////////*/
+.Log_in_header {
+  background: white;
+  position: relative;
+}
+
+.Log_in_header_title {
+  height: 20px;
+}
+
+.Log_in_header_title h1 {
+  color: #0f3b62;
+  font-weight: bold;
+}
+
+.Log_in_contact_us {
+  background: white;
+  position: absolute;
+}
+
+.Log_in_contact_us img {
+  max-width: 100%;
+}
+
+.result {
+  background: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  visibility: hidden;
+  z-index: 1000;
+  border-radius: 15px;
+  border: 2px solid #ababab;
+}
+
+/* وقتی باید نمایش داده شود */
+.result.show {
+  animation: slideInDown 0.9s ease forwards;
+  visibility: visible;
+}
+
+/* وقتی باید بسته شود */
+.result.hide {
+  animation: slideOutUp 0.9s ease forwards;
+  visibility: hidden;
+}
+
+.exit_button {
+  float: left;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.exit_button h3 {
+  text-align: center;
+  color: #333;
+}
+
+.exit_button h3:hover {
+  color: red;
+}
+
+.callToAdmin {
+  background: white;
+  padding: 10px;
+  margin-right: 65px;
+  border-radius: 10px;
+  border-bottom: 3px solid #07bc0c;
+}
+
+.callToAdmin p {
+  text-align: center;
+  color: #757575;
+}
+
+.Log_in_main_box {
+  width: 100%;
+  background: #f3f0f0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.log_in_form {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #ababab;
+}
+
+.log_in_title {
+  background: #f3f0f0;
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid #ababab;
+}
+
+.log_in_title h3 {
+  text-align: center;
+  color: #ababab;
+  font-weight: bold;
+}
+
+.Log_in_user_name {
+  background: white;
+}
+
+.Log_in_password {
+  background: white;
+  background-color: white;
+}
+
+.log_in_form input[type="text"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.log_in_form input[type="password"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.log_in_form label {
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.Log_in_eye {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: white;
+}
+
+.Log_in_eye button {
+  color: #333;
+  background: white;
+  cursor: pointer;
+}
+
+.Log_in_backslash {
+  position: absolute;
+  visibility: hidden;
+}
+
+.Log_in_backslash h3 {
+  color: #333;
+  cursor: pointer;
+}
+
+.Log_in_user_name_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.Log_in_password_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.enter {
+  width: 343px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 25px;
+}
+
+.log_in_form input[type="submit"] {
+  background: #2d419f;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease 0.05s;
+}
+
+.log_in_form input[type="submit"]:hover {
+  background: #013766;
+}
+
+.forgetPassword {
+  position: absolute;
+}
+
+.forgetPassword span {
+  color: #0e0eef;
+  text-align: center;
+  padding: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.endOfLoginForm {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* Contact_us ////////////////////////////////////////////////////////////////////*/
+.Contact_us_header {
+  background: white;
+  position: relative;
+}
+
+.Contact_us_header_title {
+  height: 20px;
+}
+
+.Contact_us_header_title h1 {
+  color: #0f3b62;
+  font-weight: bold;
+}
+
+.title-contact-out {
+  width: 100%;
+  background: #f3f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+.title-contact-in {
+  background: #f3f0f0;
+  margin-top: 30px;
+}
+
+.title-contact-in h3 {
+  color: #013766;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gray-block {
+  background: #f3f0f0;
+  position: relative;
+}
+
+.c {
+  position: absolute;
+}
+
+.c img {
+  max-width: 100%;
+}
+
+/* Change_password //////////////////////////////////////////////////////////////*/
+.set_new_password_body {
+  background: white;
+}
+
+.set_new_password_warning {
+  width: 450px;
+  height: 40px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.set_new_password_warning h3 {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.set_new_password_main_box {
+  width: 100%;
+  height: 700px;
+  background: white;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.old_password_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.password_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.password_repeat_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.set_new_password_form {
+  background: white;
+}
+
+.old_password {
+  background: white;
+}
+
+.set_new_password_password {
+  background: white;
+}
+
+.set_new_password_password_repeat {
+  background: white;
+}
+
+.set_new_password_form input[type="text"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.set_new_password_form input[type="password"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.set {
+  width: 343px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 25px;
+}
+
+.set_new_password_form input[type="button"] {
+  background: #2d419f;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease 0.05s;
+}
+
+.set_new_password_form input[type="button"]:hover {
+  background: #013766;
+}
+
+.set_new_password_return {
+  background: white;
+  position: absolute;
+}
+
+.set_new_password_return a {
+  color: #0e0eef;
+  text-decoration: none;
+  text-align: center;
+  padding: 3px;
+}
+
+.set_new_password_eye {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: white;
+}
+
+.set_new_password_eye button {
+  color: #333;
+  background: white;
+  cursor: pointer;
+}
+
+.set_new_password_backslash {
+  position: absolute;
+  visibility: hidden;
+}
+
+.set_new_password_backslash h3 {
+  color: #333;
+  cursor: pointer;
+}
+
+/* Registration_of_the_crop_year //////////////////////////////////////////////////////////////*/
+.Generate_new_crop_year_exit_button {
+  float: left;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.Generate_new_crop_year_exit_button h3 {
+  text-align: center;
+  color: #333;
+}
+
+.Generate_new_crop_year_main_box {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  visibility: hidden;
+}
+
+.Generate_new_crop_year_form {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #ababab;
+  margin-top: 10px;
+}
+
+.Generate_new_crop_year_title {
+  background: #f3f0f0;
+  border-radius: 10px;
+  border: 2px solid #ababab;
+}
+
+.Generate_new_crop_year_title h3 {
+  text-align: center;
+  color: #ababab;
+  font-weight: bold;
+}
+
+.cropYear {
+  margin-top: 70px;
+  text-align: right;
+  background: white;
+}
+
+.Generate_new_crop_year_form input[type="text"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.Generate_new_crop_year_form label {
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.Generate_new_crop_year_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.enter {
+  width: 343px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+
+.Generate_new_crop_year_form input[type="submit"] {
+  background: #2d419f;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease 0.05s;
+}
+
+.Generate_new_crop_year_form input[type="submit"]:hover {
+  background: #013766;
+}
+
+.delete_crop_year_btn {
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: rgb(232, 228, 228);
+}
+
+@media (min-width: 768px) {
+  .delete_crop_year_btn {
+    font-size: 35px;
+  }
+}
+
+/* فونت برای lg (1024px به بالا) */
+@media (min-width: 1024px) {
+  .delete_crop_year_btn {
+    font-size: 15px;
+  }
+}
+
+.delete_crop_year_btn:hover {
+  background: rgb(198, 195, 195);
+}
+
+/* Province_registration //////////////////////////////////////////////////////////////*/
+.Generate_new_province_exit_button {
+  float: left;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.Generate_new_province_exit_button h3 {
+  text-align: center;
+  color: #333;
+}
+
+.Generate_new_province_main_box {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  visibility: hidden;
+}
+
+.Generate_new_province_form {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #ababab;
+  margin-top: 10px;
+}
+
+.Generate_new_province_title {
+  background: #f3f0f0;
+  border-radius: 10px;
+  border: 2px solid #ababab;
+}
+
+.Generate_new_province_title h3 {
+  text-align: center;
+  color: #ababab;
+  font-weight: bold;
+}
+
+.province {
+  margin-top: 70px;
+  text-align: right;
+  background: white;
+}
+
+.Generate_new_province_form input[type="text"] {
+  border: 2px solid #ababab;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  margin-right: 25px;
+}
+
+.Generate_new_province_form label {
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.Generate_new_province_error {
+  position: absolute;
+  color: red;
+  visibility: hidden;
+}
+
+.enter {
+  width: 343px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+
+.Generate_new_province_form input[type="submit"] {
+  background: #2d419f;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease 0.05s;
+}
+
+.Generate_new_province_form input[type="submit"]:hover {
+  background: #013766;
+}
+
+.delete_province_btn {
+  padding: 5px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: rgb(232, 228, 228);
+}
+
+@media (min-width: 768px) {
+  .delete_province_btn {
+    font-size: 35px;
+  }
+}
+
+/* فونت برای lg (1024px به بالا) */
+@media (min-width: 1024px) {
+  .delete_province_btn {
+    font-size: 15px;
+  }
+}
+
+.delete_province_btn:hover {
+  background: rgb(198, 195, 195);
+}
+
+/* Factory_reports //////////////////////////////////////////////////////////////*/
+.title_Factory_reports h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #013766;
+  padding: 50px 0 30px 0;
+  background: #f3f0f0;
+}
+
+.Cards_Factory_reports {
+  background: white;
+  margin: 20px;
+  border-radius: 20px;
+  border: 2px solid #f3f0f0;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Cards_Factory_reports h3 {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Cards_Factory_reports p {
+  color: white;
+  line-height: 24px;
+  text-align: center;
+}
+
+#total_money_received_all_factories {
+  background: #3479f3;
+}
+
+#total_farmers_debt_all {
+  background: #e88d09;
+}
+
+#total_farmers_payment_cash_all {
+  background: #23927e;
+}
+
+#remained_now_contractor_all {
+  background: #a048f2;
+}
+
+#total_factory_delivered_tonnage {
+  background: #12ae9d;
+}
+
+#total_factory_commitment_tonnage {
+  background: #f36912;
+}
+
+#total_remaining_commitment_tonnage {
+  background: #ee3457;
+}
