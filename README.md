@@ -55,7 +55,7 @@
 ### نمونه ای از صفحات وب بر روی موبایل
 
 <p align="center">
-<img src="Images/Readme-6.png" width="600">
+<img src="Images/Readme-6.jpg" width="400">
 </p>
 
 ### نمونه ای از نحوه اتصال صفحات به APIها
