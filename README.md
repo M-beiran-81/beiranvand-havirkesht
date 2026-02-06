@@ -1,6 +1,7 @@
-# پروژه درس برنامه‌نویسی وب
+# گزارش مراحل پروژه درس برنامه‌نویسی وب
 
-This is a solution to the [Social proof section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+در اینجا، گزارشی از مراحل انجام پروژه به‌همراه توضیح هر بخش و تصاویر مربوط به هر مرحله ارائه شده است.  
+هدف از این گزارش، مستندسازی فرآیند طراحی، پیاده‌سازی و تست سامانه به‌صورت گام‌به‌گام می‌باشد تا روند توسعه پروژه به‌صورت شفاف و قابل ارزیابی باشد.
 
 ## Table of contents
 
