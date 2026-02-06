@@ -109,13 +109,13 @@
 ### صفحه cPanel
 
 <p align="center">
-<img src="Images/Readme-10.png" width="400">
+<img src="Images/Readme-10.png" width="600">
 </p>
 
 ### با کلیک بر روی دکمه آپلود می‌توان فایل های پروژه را بر روی هاست مستقر کرد
 
 <p align="center">
-<img src="Images/Readme-11.png" width="400">
+<img src="Images/Readme-11.png" width="600">
 </p>
 
 ## Author
