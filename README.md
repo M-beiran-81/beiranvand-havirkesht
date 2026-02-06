@@ -76,13 +76,13 @@
 ### نمونه‌ای از پوشش خطای پروژه
 
 <p align="center">
-<img src="Images/Readme-8.png" width="600">
+<img src="Images/Readme-8.jpg" width="250">
 </p>
 
 ### نمونه‌ای از پوشش خطای پروژه هنگام وارد کردن اطلاعات غلط
 
 <p align="center">
-<img src="Images/Readme-9.png" width="600">
+<img src="Images/Readme-9.jpg" width="250">
 </p>
 
 
