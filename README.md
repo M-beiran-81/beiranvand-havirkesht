@@ -89,47 +89,14 @@
 
 در این مرحله یک دامنه به نام beiranvand-havirkesht و با پسوند ir و همچنین یک هاست لینوکسی از وبسایت میهن وب هاست به آدرس [https://mihanwebhost.com](https://mihanwebhost.com) خریداری شده است و فایلهای مربوط به پروژه بر روی هاست قرار گرفته اند. 
 
-## Table of contents
+## مرحله7:
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot) -
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the section depending on their device's screen size
-
-### Screenshot
-
-![](./images/desktop.png)
-![](./images/mobile.png)
-
-### Links
-
-- Live Site URL:[Responsive-social-proof-section-master](https://somaye-beiranvand.github.io/FrontendMentor-Responsive-social-proof-section-master/)
-
-## My process
-
-### Built with
-
-- HTML5
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- bootstrap
-
-### Useful resources
-
-- [bootsrtap customizations](https://www.youtube.com/watch?v=nCX3QVl_PiI) - This helped me customize bootstrap containers max-width
+در این مرحله، یک مخزن (Repository) جدید در حساب کاربری GitHub ایجاد شد تا سورس‌کدهای پروژه به‌صورت منظم و نسخه‌بندی‌شده نگهداری شوند.  
+ابتدا یک ریپازیتوری با نام مرتبط با پروژه ساخته شد و سپس فایل‌های پروژه شامل کدهای HTML، CSS، JavaScript، فایل‌های Tailwind و... در آن قرار گرفتند.  
+پس از آماده‌سازی پروژه به‌صورت محلی، با استفاده از Git، مخزن مقداردهی اولیه (init) شد و فایل‌ها به آن اضافه گردیدند.  
+در ادامه تغییرات با دستور commit ثبت شدند و پروژه به مخزن GitHub ارسال (push) شد.  
+این کار باعث شد سورس‌کد پروژه به‌صورت آنلاین در دسترس باشد و امکان مدیریت نسخه‌ها و ارائه پروژه فراهم شود.  
+همچنین از این طریق امکان توسعه و به‌روزرسانی پروژه در آینده به‌صورت ساخت‌یافته فراهم شده است.
 
 ## Author
 
